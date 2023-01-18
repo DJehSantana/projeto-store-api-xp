@@ -53,19 +53,20 @@ async function updateClient() {
         throw error;
 
     } finally {
-
+        conn.release();
     }
 }
 
-async function deleteClient() {
+async function deleteClient(id) {
     const conn = await connect();
     try {
+        await conn.query("DELETE FROM clients WHERE client_id = $1", [id]);
 
     } catch (error) {
         throw error;
 
     } finally {
-
+        conn.release();
     }
 }
 

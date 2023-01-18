@@ -20,5 +20,17 @@ async function getClient(id) {
 
 }
 
+async function destroyClient(id) {
+    if (!id || !parseInt(id)) {
+        throw new Error("Register not found");
+    }
+    await deleteClient(id);
+}
 
-export { saveClient, getClients, getClient }
+
+export {
+    saveClient,
+    getClients,
+    getClient,
+    destroyClient
+}
