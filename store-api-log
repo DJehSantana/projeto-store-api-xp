@@ -1,25 +1,12 @@
-2023-01-18T00:10:33.856Z [store-api] error POST  - Empty required fields
-2023-01-18T00:18:06.385Z [store-api] error POST  - Empty required fields
-2023-01-18T00:18:28.588Z [store-api] error POST  - column "address" of relation "clients" does not exist
-2023-01-18T00:18:58.491Z [store-api] info POST /client - {"name":"João","cpf":"123456789","phone":"34567890","email":"joao@email.com","adress":"Rua X, numero 100"}
-2023-01-18T00:22:12.642Z [store-api] info POST /client - {"name":"Carlos","cpf":"234567890","phone":"35461234","email":"carlos@email.com","adress":"Rua Y, numero 200"}
-2023-01-18T02:43:51.634Z [store-api] info GET /client - [object Object]
-2023-01-18T02:44:00.983Z [store-api] info GET /client - [object Object]
-2023-01-18T02:46:18.260Z [store-api] info GET /client - [object Object]
-2023-01-18T02:52:06.449Z [store-api] info GET /client/:id - {"client_id":1,"name":"João","cpf":"123456789","phone":"34567890","email":"joao@email.com","adress":"Rua X, numero 100"}
-2023-01-18T02:52:41.200Z [store-api] info GET /client/:id - {"client_id":2,"name":"Carlos","cpf":"234567890","phone":"35461234","email":"carlos@email.com","adress":"Rua Y, numero 200"}
-2023-01-18T03:04:30.515Z [store-api] info POST /client - {"name":"Daniel","cpf":"234567890","phone":"35461234","email":"daniel@email.com","adress":"Rua Z, numero 300"}
-2023-01-18T03:08:40.383Z [store-api] info DELETE /client/:id - Register deleted with success
-2023-01-18T03:08:47.765Z [store-api] info GET /client - [object Object]
-2023-01-24T23:31:27.085Z [store-api] error PUT  - Id is required field
-2023-01-24T23:31:36.854Z [store-api] info POST /client - {"client_id":4,"name":"Daniel","cpf":"234567890","phone":"35461234","email":"daniel@email.com","adress":"Rua Z, numero 300"}
-2023-01-24T23:32:09.142Z [store-api] info PUT /client - undefined
-2023-01-24T23:39:11.170Z [store-api] info PUT /client - undefined
-2023-01-25T00:15:39.531Z [store-api] info POST /supplier - {"suplier_id":1,"name":"Comercial eletrônicos","cnpj":"23456789012345","phone":"35461289","email":"comercialele@email.com","address":"Rua Z, numero 350"}
-2023-01-25T00:17:58.342Z [store-api] info POST /supplier - {"suplier_id":2,"name":"E eletrônicos","cnpj":"5678390217689","phone":"35234569","email":"eletronicos@email.com","address":"Rua Y, numero 850"}
-2023-01-25T00:19:09.163Z [store-api] info PUT /supplier - undefined
-2023-01-25T00:19:40.983Z [store-api] info GET /supplier - [object Object]
-2023-01-25T00:20:14.503Z [store-api] info GET /supplier/:id - {"suplier_id":2,"name":"E eletrônicos","cnpj":"5678390217689","phone":"35234569","email":"eeletronicos@email.com","address":"Rua Y, numero 850"}
-2023-01-25T00:20:51.689Z [store-api] info DELETE /supplier/:id - Register deleted with success
-2023-01-25T00:21:14.791Z [store-api] info POST /supplier - {"suplier_id":3,"name":"E eletrônicos","cnpj":"5678390217689","phone":"35234569","email":"eletronicos@email.com","address":"Rua Y, numero 850"}
-2023-01-25T00:21:30.047Z [store-api] info GET /supplier/:id - {"suplier_id":1,"name":"Comercial eletrônicos","cnpj":"23456789012345","phone":"35461289","email":"comercialele@email.com","address":"Rua Z, numero 350"}
+2023-01-25T13:42:00.343Z [store-api] error POST  - column "adress" of relation "products" does not exist
+2023-01-25T13:43:33.514Z [store-api] info POST /product - {"product_id":1,"suplier_id":1,"name":"Notebook Acer","description":"Notebook Acer Nitro i7 2Gb","value":"4500","stock":10}
+2023-01-25T13:44:06.113Z [store-api] error POST  - insert or update on table "products" violates foreign key constraint "fk_supliers"
+2023-01-25T13:44:22.162Z [store-api] info POST /product - {"product_id":3,"suplier_id":3,"name":"Notebook Dell","description":"Notebook Dell i7 4Gb","value":"5200","stock":4}
+2023-01-25T13:44:44.002Z [store-api] info DELETE /product/:id - Register deleted with success
+2023-01-25T13:44:51.976Z [store-api] info GET /product/:id - {"product_id":3,"suplier_id":3,"name":"Notebook Dell","description":"Notebook Dell i7 4Gb","value":"5200","stock":4}
+2023-01-25T13:45:01.615Z [store-api] info GET /product - [object Object]
+2023-01-25T13:45:56.017Z [store-api] info PUT /product - undefined
+2023-01-25T13:46:01.925Z [store-api] info GET /product - [object Object]
+2023-01-25T13:50:27.965Z [store-api] error POST  - insert or update on table "products" violates foreign key constraint "fk_supliers"
+2023-01-25T13:53:54.016Z [store-api] error POST  - insert or update on table "products" violates foreign key constraint "fk_supliers"
+2023-01-25T13:57:04.423Z [store-api] info GET /product - [object Object]
