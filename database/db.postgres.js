@@ -1,15 +1,8 @@
-import pg from 'pg';
-//import dotenv from 'dotenv';
+import Sequelize from 'sequelize';
+import dotenv from 'dotenv';
 
-//dotenv.config();
-
-/**O pool ajuda a gerenciar as conexões do Banco de Dados.
-    * O Banco de dados suporta uma quantidade de conexões.
-    * Quando a aplicação pedir uma nova conexão, o pool vai procurar se existe
-    * já alguma conexão disponível que possa ser utilizada,
-    * se houver ele utilizará a conexão disponível ao invés de criar uma nova
-*/
-
+dotenv.config();
+/*
 async function connect() {
     if (global.connection) {
         return global.connection.connect();
@@ -22,5 +15,14 @@ async function connect() {
 
     return pool.connect();
 }
+*/
 
-export { connect }
+const sequelize = new Sequelize(process.env.DATABASE_URL,
+    {
+        dialect: "postgres",
+        define: {
+            timestamps: false
+        }
+    });
+
+export default sequelize;

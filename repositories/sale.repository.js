@@ -1,4 +1,4 @@
-import { connect } from "../database/db.postgres.js";
+import connect from "../database/db.postgres.js";
 
 async function insertSale(sale) {
     const conn = await connect();

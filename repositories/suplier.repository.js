@@ -1,4 +1,4 @@
-import { connect } from "../database/db.postgres.js";
+import connect from "../database/db.postgres.js";
 
 async function insertSuplier(suplier) {
     const conn = await connect();

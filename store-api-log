@@ -57,3 +57,13 @@
 2023-01-25T17:41:20.229Z [store-api] info GET /sale - [object Object]
 2023-01-25T17:43:30.143Z [store-api] info GET /sale - [object Object]
 2023-01-25T17:43:40.224Z [store-api] info GET /sale - [object Object]
+2023-01-25T20:50:18.227Z [store-api] info GET /client - [object Object]
+2023-01-25T20:51:03.260Z [store-api] info GET /client/:id - {"clientId":2,"name":"Carlos","cpf":"234567890","phone":"35461234","email":"carlos@email.com","adress":"Rua Y, numero 200"}
+2023-01-25T20:51:51.142Z [store-api] info POST /client - {"clientId":5,"name":"Eduarda","cpf":"89076512345","phone":"35458667","email":"eduarda@email.com","adress":"Rua A, numero 650"}
+2023-01-25T20:52:40.968Z [store-api] error PUT  - Id is required field
+2023-01-25T20:53:23.687Z [store-api] info PUT /client - {"clientId":5,"name":"Eduarda","cpf":"89076512345","phone":"35458657","email":"eduarda@email.com","adress":"Rua A, numero 750"}
+2023-01-25T20:54:18.298Z [store-api] info DELETE /client/:id - Register deleted with success
+2023-01-25T20:54:31.392Z [store-api] info GET /client - [object Object]
+2023-01-25T20:54:50.440Z [store-api] info GET /client/:id - null
+2023-01-25T20:57:04.949Z [store-api] error GET  - Register not found
+2023-01-25T20:57:11.042Z [store-api] info GET /client/:id - {"clientId":4,"name":"Daniel da Silva","cpf":"45678901234","phone":"35461234","email":"daniel@email.com","adress":"Rua Z, numero 300"}

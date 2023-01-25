@@ -9,9 +9,9 @@ import dotenv from 'dotenv';
 import { logger } from './enums/logger.js';
 
 const app = express();
-const PORT = 3000;
-
 dotenv.config();
+
+const PORT = process.env.PORT || 3002;
 
 app.use(express.json());
 app.use(cors());
