@@ -11,3 +11,15 @@
 2023-01-18T03:04:30.515Z [store-api] info POST /client - {"name":"Daniel","cpf":"234567890","phone":"35461234","email":"daniel@email.com","adress":"Rua Z, numero 300"}
 2023-01-18T03:08:40.383Z [store-api] info DELETE /client/:id - Register deleted with success
 2023-01-18T03:08:47.765Z [store-api] info GET /client - [object Object]
+2023-01-24T23:31:27.085Z [store-api] error PUT  - Id is required field
+2023-01-24T23:31:36.854Z [store-api] info POST /client - {"client_id":4,"name":"Daniel","cpf":"234567890","phone":"35461234","email":"daniel@email.com","adress":"Rua Z, numero 300"}
+2023-01-24T23:32:09.142Z [store-api] info PUT /client - undefined
+2023-01-24T23:39:11.170Z [store-api] info PUT /client - undefined
+2023-01-25T00:15:39.531Z [store-api] info POST /supplier - {"suplier_id":1,"name":"Comercial eletrônicos","cnpj":"23456789012345","phone":"35461289","email":"comercialele@email.com","address":"Rua Z, numero 350"}
+2023-01-25T00:17:58.342Z [store-api] info POST /supplier - {"suplier_id":2,"name":"E eletrônicos","cnpj":"5678390217689","phone":"35234569","email":"eletronicos@email.com","address":"Rua Y, numero 850"}
+2023-01-25T00:19:09.163Z [store-api] info PUT /supplier - undefined
+2023-01-25T00:19:40.983Z [store-api] info GET /supplier - [object Object]
+2023-01-25T00:20:14.503Z [store-api] info GET /supplier/:id - {"suplier_id":2,"name":"E eletrônicos","cnpj":"5678390217689","phone":"35234569","email":"eeletronicos@email.com","address":"Rua Y, numero 850"}
+2023-01-25T00:20:51.689Z [store-api] info DELETE /supplier/:id - Register deleted with success
+2023-01-25T00:21:14.791Z [store-api] info POST /supplier - {"suplier_id":3,"name":"E eletrônicos","cnpj":"5678390217689","phone":"35234569","email":"eletronicos@email.com","address":"Rua Y, numero 850"}
+2023-01-25T00:21:30.047Z [store-api] info GET /supplier/:id - {"suplier_id":1,"name":"Comercial eletrônicos","cnpj":"23456789012345","phone":"35461289","email":"comercialele@email.com","address":"Rua Z, numero 350"}

@@ -27,10 +27,22 @@ async function destroyClient(id) {
     await deleteClient(id);
 }
 
+async function updateClientById(client) {
+    if (!client.client_id) {
+        throw new Error("Id is required field");
+    }
+    if (!client.name || !client.cpf || !client.phone || !client.email || !client.adress) {
+        throw new Error("Empty required fields");
+    }
+
+    return await updateClient(client);
+}
+
 
 export {
     saveClient,
     getClients,
     getClient,
-    destroyClient
+    destroyClient,
+    updateClientById
 }

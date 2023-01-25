@@ -1,8 +1,8 @@
 import express from 'express';
 import cors from 'cors';
 
-import clientsRouter from './routes/client.route.js';
-import suppliersRouter from './routes/supplier.route.js';
+import { clientRouter } from './routes/client.route.js';
+import { supplierRouter } from './routes/supplier.route.js';
 import productsRouter from './routes/product.route.js';
 import salesRouter from './routes/sale.route.js';
 import dotenv from 'dotenv';
@@ -16,8 +16,8 @@ dotenv.config();
 app.use(express.json());
 app.use(cors());
 
-app.use('/client', clientsRouter);
-app.use('/supllier', suppliersRouter);
+app.use('/client', clientRouter);
+app.use('/supplier', supplierRouter);
 app.use('/product', productsRouter);
 app.use('/sale', salesRouter);
 

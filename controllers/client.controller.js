@@ -1,11 +1,12 @@
 import { logger } from "../enums/logger.js";
-import { destroyClient, getClient, getClients, saveClient } from "../services/client.service.js";
+import { destroyClient, getClient, getClients, saveClient, updateClientById } from "../services/client.service.js";
 
 async function createClient(req, res, next) {
     try {
         let client = req.body;
         //ClientService
-        res.send(await saveClient(client));
+        client = await saveClient(client);
+        res.send(client);
         logger.info(`POST /client - ${JSON.stringify(client)}`);
 
     } catch (e) {
@@ -32,19 +33,23 @@ async function getClientById(req, res, next) {
     }
 }
 
-async function updateClient(req, res, next) {
-    try {
-        const id = req.params.id;
-    } catch (e) {
-        next(e)
-    }
-}
-
 async function deleteClient(req, res, next) {
     try {
         await destroyClient(req.params.id);
         res.end();
         logger.info("DELETE /client/:id - Register deleted with success");
+    } catch (e) {
+        next(e);
+    }
+}
+
+async function updateClient(req, res, next) {
+    try {
+        let client = req.body;
+        client = await updateClientById(client);
+        res.send(client);
+        logger.info(`PUT /client - ${JSON.stringify(client)}`);
+
     } catch (e) {
         next(e);
     }
