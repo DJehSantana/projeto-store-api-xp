@@ -1,8 +1,15 @@
 import { insertProduct, getAllProducts, getProductById, updateProduct, deleteProduct } from "../repositories/product.repository.js"
+import { getSuplierById } from '../repositories/suplier.repository.js'
 
 async function saveProduct(product) {
     if (!product.suplier_id || !product.name || !product.description || !product.value || !product.stock) {
         throw new Error("Empty required fields");
+    }
+
+    //verificando se o fornecedor informado consta no BD
+    let idSuplierExist = await getSuplierById(parseInt(product.suplier_id));
+    if (!idSuplierExist) {
+        throw new Error("Supplier informed not found");
     }
     return await insertProduct(product);
 }
@@ -33,6 +40,11 @@ async function updateProductById(product) {
     }
     if (!product.suplier_id || !product.name || !product.description || !product.value || !product.stock) {
         throw new Error("Empty required fields");
+    }
+
+    let idSuplierExist = await getSuplierById(parseInt(product.suplier_id));
+    if (!idSuplierExist) {
+        throw new Error("Supplier informed not found");
     }
 
     return await updateProduct(product);

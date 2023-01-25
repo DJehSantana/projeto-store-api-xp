@@ -10,3 +10,40 @@
 2023-01-25T13:50:27.965Z [store-api] error POST  - insert or update on table "products" violates foreign key constraint "fk_supliers"
 2023-01-25T13:53:54.016Z [store-api] error POST  - insert or update on table "products" violates foreign key constraint "fk_supliers"
 2023-01-25T13:57:04.423Z [store-api] info GET /product - [object Object]
+2023-01-25T14:40:37.383Z [store-api] error PUT  - Supllier informed not found
+2023-01-25T15:04:13.333Z [store-api] error POST  - Empty required fields
+2023-01-25T15:06:30.109Z [store-api] error POST  - date/time field value out of range: "25/01/2023"
+2023-01-25T15:07:41.722Z [store-api] info POST /sale - {"sale_id":1,"client_id":2,"product_id":1,"value":"4500","date":"2023-01-25T03:00:00.000Z"}
+2023-01-25T15:09:29.902Z [store-api] error POST  - insert or update on table "sales" violates foreign key constraint "fk_clients"
+2023-01-25T15:09:44.874Z [store-api] info POST /sale - {"sale_id":3,"client_id":1,"product_id":1,"value":"4500","date":"2023-01-25T03:00:00.000Z"}
+2023-01-25T15:10:50.144Z [store-api] info PUT /sale - undefined
+2023-01-25T15:10:55.834Z [store-api] info GET /sale - [object Object]
+2023-01-25T15:11:01.269Z [store-api] info GET /sale/:id - {"sale_id":3,"client_id":1,"product_id":3,"value":"5200","date":"2023-01-25T03:00:00.000Z"}
+2023-01-25T15:11:09.742Z [store-api] info DELETE /sale/:id - Register deleted with success
+2023-01-25T15:11:17.728Z [store-api] info GET /sale - [object Object]
+2023-01-25T16:10:31.888Z [store-api] info POST /sale - {"sale_id":4,"client_id":1,"product_id":1,"value":"4500","date":"2023-01-25T03:00:00.000Z"}
+2023-01-25T16:10:43.607Z [store-api] info GET /product/:id - {"product_id":1,"suplier_id":1,"name":"Notebook Acer","description":"Notebook Acer Nitro i7 2Gb","value":"4500","stock":9}
+2023-01-25T16:12:15.996Z [store-api] error POST  - Supplier informed not found
+2023-01-25T16:12:23.026Z [store-api] info POST /product - {"product_id":7,"suplier_id":3,"name":"Mouse Dell","description":"Mouse Bluetooh Dell","value":"50","stock":1}
+2023-01-25T16:12:45.096Z [store-api] info POST /sale - {"sale_id":5,"client_id":1,"product_id":7,"value":"50","date":"2023-01-25T03:00:00.000Z"}
+2023-01-25T16:12:51.172Z [store-api] error POST  - Don't this product in stock
+2023-01-25T16:13:53.245Z [store-api] info PUT /product - undefined
+2023-01-25T16:14:08.891Z [store-api] info GET /product - [object Object]
+2023-01-25T16:20:41.990Z [store-api] info GET /sale - [object Object]
+2023-01-25T16:20:58.543Z [store-api] error DELETE  - Sale register not found
+2023-01-25T16:21:10.041Z [store-api] error DELETE  - Register Id not found
+2023-01-25T16:21:19.984Z [store-api] info DELETE /sale/:id - Register deleted with success
+2023-01-25T16:21:29.044Z [store-api] info GET /product - [object Object]
+2023-01-25T16:23:11.106Z [store-api] error PUT  - Empty required fields
+2023-01-25T16:23:43.680Z [store-api] error PUT  - invalid input syntax for type integer: "NaN"
+2023-01-25T16:24:56.354Z [store-api] info PUT /sale - undefined
+2023-01-25T16:25:04.257Z [store-api] info GET /sale - [object Object]
+2023-01-25T16:25:19.239Z [store-api] info PUT /sale - undefined
+2023-01-25T16:25:35.183Z [store-api] info GET /sale - [object Object]
+2023-01-25T16:26:46.048Z [store-api] info GET /sale - [object Object]
+2023-01-25T16:27:25.054Z [store-api] info PUT /sale - undefined
+2023-01-25T16:27:29.586Z [store-api] info GET /sale - [object Object]
+2023-01-25T16:27:38.546Z [store-api] info POST /sale - {"sale_id":6,"client_id":2,"product_id":7,"value":"50","date":"2023-01-25T03:00:00.000Z"}
+2023-01-25T16:27:44.533Z [store-api] info GET /sale - [object Object]
+2023-01-25T16:28:27.148Z [store-api] info PUT /sale - undefined
+2023-01-25T16:28:36.685Z [store-api] info GET /sale - [object Object]

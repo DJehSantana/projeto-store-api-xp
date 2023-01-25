@@ -1,5 +1,13 @@
 import express from "express";
 
-const router = express.Router();
+import { createSale, getAllSales, getSaleById, deleteSale, updateSale } from "../controllers/sale.controller.js";
 
-export default router;
+const saleRouter = express.Router();
+
+saleRouter.post('/', createSale);
+saleRouter.get('/', getAllSales);
+saleRouter.get('/:id', getSaleById);
+saleRouter.delete('/:id', deleteSale);
+saleRouter.put('/', updateSale);
+
+export { saleRouter };
