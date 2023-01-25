@@ -18,6 +18,7 @@ async function insertSale(sale) {
     }
 }
 
+
 async function getAllSales() {
     const conn = await connect();
     try {
@@ -40,6 +41,30 @@ async function getSaleById(id) {
     } catch (error) {
         throw error;
 
+    } finally {
+        conn.release();
+    }
+}
+
+async function getSalesByProductId(product_id) {
+    const conn = await connect();
+    try {
+        const resultado = await conn.query("SELECT * FROM sales WHERE product_id = $1", [product_id]);
+        return resultado.rows;
+    } catch (error) {
+        throw error;
+    } finally {
+        conn.release();
+    }
+}
+
+async function getSalesByClientId(client_id) {
+    const conn = await connect();
+    try {
+        const resultado = await conn.query("SELECT * FROM sales WHERE client_id = $1", [client_id]);
+        return resultado.rows;
+    } catch (error) {
+        throw error;
     } finally {
         conn.release();
     }
@@ -79,6 +104,8 @@ export {
     insertSale,
     getAllSales,
     getSaleById,
+    getSalesByProductId,
+    getSalesByClientId,
     updateSale,
     deleteSale
 }

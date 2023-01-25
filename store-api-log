@@ -47,3 +47,13 @@
 2023-01-25T16:27:44.533Z [store-api] info GET /sale - [object Object]
 2023-01-25T16:28:27.148Z [store-api] info PUT /sale - undefined
 2023-01-25T16:28:36.685Z [store-api] info GET /sale - [object Object]
+2023-01-25T17:28:44.151Z [store-api] info GET /sale - [object Object]
+2023-01-25T17:29:12.220Z [store-api] info GET /sale - [object Object]
+2023-01-25T17:34:48.624Z [store-api] error GET  - getSalesByClientId is not defined
+2023-01-25T17:35:37.866Z [store-api] info GET /sale - [object Object]
+2023-01-25T17:37:46.298Z [store-api] info GET /sale - [object Object]
+2023-01-25T17:38:52.450Z [store-api] info GET /sale - [object Object]
+2023-01-25T17:39:45.141Z [store-api] info GET /sale - [object Object]
+2023-01-25T17:41:20.229Z [store-api] info GET /sale - [object Object]
+2023-01-25T17:43:30.143Z [store-api] info GET /sale - [object Object]
+2023-01-25T17:43:40.224Z [store-api] info GET /sale - [object Object]

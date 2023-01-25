@@ -1,4 +1,4 @@
-import { insertSale, getAllSales, getSaleById, updateSale, deleteSale } from "../repositories/sale.repository.js"
+import { insertSale, getAllSales, getSaleById, updateSale, deleteSale, getSalesByProductId, getSalesByClientId } from "../repositories/sale.repository.js"
 import { getClientById } from '../repositories/client.repository.js';
 import { getProductById, updateProduct } from '../repositories/product.repository.js';
 
@@ -28,7 +28,14 @@ async function saveSale(sale) {
     }
 }
 
-async function getSales() {
+async function getSales(product_id, client_id) {
+    //caso receba algum parâmetro na query
+    if (product_id) {
+        return await getSalesByProductId(product_id);
+    }
+    if (client_id) {
+        return await getSalesByClientId(client_id);
+    }
     return await getAllSales();
 }
 
