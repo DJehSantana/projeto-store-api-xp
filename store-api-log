@@ -67,3 +67,31 @@
 2023-01-25T20:54:50.440Z [store-api] info GET /client/:id - null
 2023-01-25T20:57:04.949Z [store-api] error GET  - Register not found
 2023-01-25T20:57:11.042Z [store-api] info GET /client/:id - {"clientId":4,"name":"Daniel da Silva","cpf":"45678901234","phone":"35461234","email":"daniel@email.com","adress":"Rua Z, numero 300"}
+2023-01-26T20:07:42.949Z [store-api] info GET /supplier - [object Object]
+2023-01-26T20:07:56.726Z [store-api] info GET /supplier/:id - {"suplierId":1,"name":"Comercial eletrônicos","cnpj":"23456789012345","phone":"35461289","email":"comercialele@email.com","address":"Rua Z, numero 350"}
+2023-01-26T20:08:31.213Z [store-api] info POST /supplier - {"suplierId":4,"name":"EJ eletrônicos","cnpj":"5678390217689","phone":"35236669","email":"ejeletronicos@email.com","address":"Rua Z, numero 250"}
+2023-01-26T20:08:51.891Z [store-api] info PUT /supplier - {"suplierId":4,"name":"EJ eletrônicos","cnpj":"5678390217689","phone":"35236669","email":"ejeletronicos@email.com","address":"Rua Z, numero 450"}
+2023-01-26T20:09:06.754Z [store-api] info POST /supplier - {"suplierId":5,"name":"EJ eletrônicos","cnpj":"5678390217689","phone":"35236669","email":"ejeletronicos@email.com","address":"Rua Z, numero 250"}
+2023-01-26T20:09:13.810Z [store-api] info DELETE /supplier/:id - Register deleted with success
+2023-01-26T20:09:25.676Z [store-api] info GET /supplier - [object Object]
+2023-01-26T20:13:17.434Z [store-api] info GET /product - [object Object]
+2023-01-26T20:13:28.805Z [store-api] info GET /product/:id - {"productId":7,"name":"Mouse Dell","description":"Mouse Bluetooh Dell","value":"50","stock":3,"suplierId":3}
+2023-01-26T20:13:50.631Z [store-api] error PUT  - Id is required field
+2023-01-26T20:14:03.783Z [store-api] info PUT /product - {"productId":7,"name":"Mouse Dell","description":"Mouse Bluetooh Dell","value":"60","stock":3,"suplierId":3}
+2023-01-26T20:14:17.563Z [store-api] info POST /product - {"productId":8,"suplierId":3,"name":"Mouse Dell","description":"Mouse Bluetooh Dell","value":"50","stock":1}
+2023-01-26T20:14:25.630Z [store-api] info DELETE /product/:id - Register deleted with success
+2023-01-26T20:29:51.257Z [store-api] error GET  - connect is not defined
+2023-01-26T20:30:39.979Z [store-api] info GET /sale - [object Object]
+2023-01-26T20:31:25.132Z [store-api] info GET /sale - [object Object]
+2023-01-26T20:36:09.136Z [store-api] info GET /sale - [object Object]
+2023-01-26T20:38:29.818Z [store-api] info GET /sale - [object Object]
+2023-01-26T20:39:22.015Z [store-api] info GET /sale - [object Object]
+2023-01-26T20:41:06.331Z [store-api] info GET /sale - [object Object]
+2023-01-26T20:43:28.010Z [store-api] info GET /sale - [object Object]
+2023-01-26T20:43:41.799Z [store-api] info GET /sale - [object Object]
+2023-01-26T20:43:50.822Z [store-api] info GET /sale - [object Object]
+2023-01-26T20:47:31.230Z [store-api] info POST /sale - {"saleId":7,"clientId":4,"productId":7,"value":"60","date":"2023-01-26"}
+2023-01-26T20:52:48.184Z [store-api] error DELETE  - This product has already been sold, cannot be deleted.
+2023-01-26T21:02:46.167Z [store-api] info GET /sale - [object Object]
+2023-01-26T21:02:51.925Z [store-api] info GET /sale - [object Object]
+2023-01-26T21:03:20.093Z [store-api] info GET /sale - [object Object]

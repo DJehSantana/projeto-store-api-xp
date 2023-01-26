@@ -28,7 +28,7 @@ async function destroySuplier(id) {
 }
 
 async function updateSuplierById(suplier) {
-    if (!suplier.suplier_id) {
+    if (!suplier.suplierId) {
         throw new Error("Id is required field");
     }
     if (!suplier.name || !suplier.cnpj || !suplier.phone || !suplier.email || !suplier.address) {

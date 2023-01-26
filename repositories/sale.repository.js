@@ -1,102 +1,120 @@
-import connect from "../database/db.postgres.js";
+import { Client } from '../models/client.model.js';
+import { Product } from '../models/product.model.js';
+import { Sale } from '../models/sale.model.js';
 
 async function insertSale(sale) {
-    const conn = await connect();
     try {
-        const sql = "INSERT INTO sales (client_id, product_id, value, date) VALUES($1, $2, $3, $4) RETURNING *"
-        const values = [sale.client_id, sale.product_id, sale.value, sale.date];
-
-        const resultado = await conn.query(sql, values);
-        //Retornando novo registro 
-        return resultado.rows[0];
-
+        return await Sale.create(sale);
     } catch (error) {
         throw error;
-    } finally {
-        //encerrando a conexão
-        conn.release();
     }
 }
 
-
 async function getAllSales() {
-    const conn = await connect();
     try {
-        const resultado = await conn.query("SELECT * FROM sales");
-        return resultado.rows;
+        return await Sale.findAll({
+            include: [
+                {
+                    model: Product
+                },
+                {
+                    model: Client
+                }
+            ]
+        });
     } catch (error) {
         throw error;
-
-    } finally {
-        conn.release();
     }
 }
 
 async function getSaleById(id) {
-    const conn = await connect();
     try {
-        const resultado = await conn.query("SELECT * FROM sales WHERE sale_id = $1", [id]);
-        //retorna o primeiro elemento da lista
-        return resultado.rows[0];
+        return await Sale.findByPk(id);
     } catch (error) {
         throw error;
-
-    } finally {
-        conn.release();
     }
 }
 
-async function getSalesByProductId(product_id) {
-    const conn = await connect();
+
+async function getSalesByProductId(productId) {
     try {
-        const resultado = await conn.query("SELECT * FROM sales WHERE product_id = $1", [product_id]);
-        return resultado.rows;
+        return await Sale.findAll({
+            where: {
+                productId: productId
+            },
+            include: [
+                {
+                    model: Client
+                }
+            ]
+        });
     } catch (error) {
         throw error;
-    } finally {
-        conn.release();
     }
 }
 
-async function getSalesByClientId(client_id) {
-    const conn = await connect();
+async function getSalesBySuplierId(suplierId) {
     try {
-        const resultado = await conn.query("SELECT * FROM sales WHERE client_id = $1", [client_id]);
-        return resultado.rows;
+        return await Sale.findAll({
+            include: [
+                {
+                    model: Product,
+                    where: {
+                        suplierId: suplierId
+                    }
+                }
+            ]
+        });
     } catch (error) {
         throw error;
-    } finally {
-        conn.release();
     }
 }
+
+async function getSalesByClientId(clientId) {
+    try {
+        return await Sale.findAll({
+            where: {
+                clientId: clientId
+            },
+            include: [
+                {
+                    model: Product
+                }
+            ]
+        });
+
+    } catch (error) {
+        throw error;
+    }
+}
+
 
 async function updateSale(sale) {
-    const conn = await connect();
     try {
-        const sql = "UPDATE sales SET client_id = $1, value = $2, date = $3  WHERE sale_id = $4";
-        const values = [sale.client_id, sale.value, sale.date, sale.sale_id];
-
-        const resultado = await conn.query(sql, values);
-        return resultado.rows[0];
-
+        const id = sale.saleId;
+        await Sale.update({
+            value: sale.value,
+            date: sale.date
+        }, {
+            where: {
+                saleId: id
+            }
+        });
+        return await getSaleById(id);
     } catch (error) {
         throw error;
-
-    } finally {
-        conn.release();
     }
 }
 
 async function deleteSale(id) {
-    const conn = await connect();
     try {
-        await conn.query("DELETE FROM sales WHERE sale_id = $1", [id]);
-
+        await Sale.destroy({
+            where: {
+                saleId: id
+            }
+        });
     } catch (error) {
         throw error;
-
-    } finally {
-        conn.release();
     }
 }
 
@@ -104,8 +122,10 @@ export {
     insertSale,
     getAllSales,
     getSaleById,
-    getSalesByProductId,
     getSalesByClientId,
+    getSalesByProductId,
+    getSalesBySuplierId,
     updateSale,
     deleteSale
 }
+

@@ -1,15 +1,15 @@
-import { insertSale, getAllSales, getSaleById, updateSale, deleteSale, getSalesByProductId, getSalesByClientId } from "../repositories/sale.repository.js"
+import { insertSale, getAllSales, getSaleById, updateSale, deleteSale, getSalesByProductId, getSalesByClientId, getSalesBySuplierId } from "../repositories/sale.repository.js"
 import { getClientById } from '../repositories/client.repository.js';
 import { getProductById, updateProduct } from '../repositories/product.repository.js';
 
 async function saveSale(sale) {
 
-    if (!sale.client_id || !sale.product_id || !sale.value || !sale.date) {
+    if (!sale.clientId || !sale.productId || !sale.value || !sale.date) {
         throw new Error("Empty required fields");
     }
 
-    const client = await getClientById(parseInt(sale.client_id));
-    const product = await getProductById(parseInt(sale.product_id));
+    const client = await getClientById(parseInt(sale.clientId));
+    const product = await getProductById(parseInt(sale.productId));
 
     if (!client || !product) {
         throw new Error("Client or Product informed does not found");
@@ -28,13 +28,16 @@ async function saveSale(sale) {
     }
 }
 
-async function getSales(product_id, client_id) {
+async function getSales(productId, clientId, suplierId) {
     //caso receba algum parâmetro na query
-    if (product_id) {
-        return await getSalesByProductId(product_id);
+    if (productId) {
+        return await getSalesByProductId(productId);
     }
-    if (client_id) {
-        return await getSalesByClientId(client_id);
+    if (clientId) {
+        return await getSalesByClientId(clientId);
+    }
+    if (suplierId) {
+        return await getSalesBySuplierId(suplierId);
     }
     return await getAllSales();
 }
@@ -54,7 +57,7 @@ async function destroySale(id) {
     const sale = await getSaleById(id);
     if (sale) {
 
-        const product = await getProductById(parseInt(sale.product_id));
+        const product = await getProductById(parseInt(sale.productId));
         await deleteSale(id);
         product.stock++;
         await updateProduct(product);
@@ -64,13 +67,13 @@ async function destroySale(id) {
 }
 
 async function updateSaleById(sale) {
-    if (!sale.sale_id) {
+    if (!sale.saleId) {
         throw new Error("Id is required field");
     }
-    if (!sale.client_id || !sale.value || !sale.date) {
+    if (!sale.clientId || !sale.value || !sale.date) {
         throw new Error("Empty required fields");
     }
-    let clientIdExists = await getClientById(parseInt(sale.client_id));
+    let clientIdExists = await getClientById(parseInt(sale.clientId));
 
     if (!clientIdExists) {
         throw new Error("Client informed not found");
