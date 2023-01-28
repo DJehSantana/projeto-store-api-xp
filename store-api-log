@@ -95,3 +95,17 @@
 2023-01-26T21:02:46.167Z [store-api] info GET /sale - [object Object]
 2023-01-26T21:02:51.925Z [store-api] info GET /sale - [object Object]
 2023-01-26T21:03:20.093Z [store-api] info GET /sale - [object Object]
+2023-01-26T21:28:49.587Z [store-api] info GET /sale - [object Object]
+2023-01-26T21:29:22.247Z [store-api] info GET /sale - [object Object]
+2023-01-26T21:29:27.486Z [store-api] info GET /sale - [object Object]
+2023-01-26T21:29:42.146Z [store-api] info GET /sale - [object Object]
+2023-01-28T21:43:11.663Z [store-api] info GET /sale - [object Object]
+2023-01-28T21:43:31.226Z [store-api] info GET /sale/:id - {"saleId":7,"value":"60","date":"2023-01-26","clientId":4,"productId":7}
+2023-01-28T21:44:07.880Z [store-api] info GET /product - [object Object]
+2023-01-28T21:44:28.380Z [store-api] info POST /sale - {"saleId":8,"clientId":4,"productId":1,"value":"4500","date":"2023-01-28"}
+2023-01-28T21:45:35.162Z [store-api] info POST /supplier - {"suplierId":6,"name":"ENJ eletrônicos","cnpj":"5678390765489","phone":"35237789","email":"enjeletronicos@email.com","address":"Rua A, numero 550"}
+2023-01-28T21:46:53.640Z [store-api] info POST /product - {"productId":9,"suplierId":6,"name":"Fone Bluetooh Dell","description":"Fone Bluetooh Dell Vermelho","value":"180","stock":5}
+2023-01-28T21:47:11.813Z [store-api] info GET /client - [object Object]
+2023-01-28T21:47:41.545Z [store-api] info POST /sale - {"saleId":9,"clientId":2,"productId":9,"value":"180","date":"2023-01-28"}
+2023-01-28T21:47:47.802Z [store-api] info POST /sale - {"saleId":10,"clientId":2,"productId":9,"value":"180","date":"2023-01-28"}
+2023-01-28T21:48:00.152Z [store-api] info DELETE /sale/:id - Register deleted with success

@@ -6,7 +6,7 @@ async function createClient(req, res, next) {
         let client = req.body;
         //ClientService
         client = await saveClient(client);
-        res.send(client);
+        res.status(201).json(client);
         logger.info(`POST /client - ${JSON.stringify(client)}`);
 
     } catch (e) {
@@ -36,7 +36,7 @@ async function getClientById(req, res, next) {
 async function deleteClient(req, res, next) {
     try {
         await destroyClient(req.params.id);
-        res.end();
+        res.status(204).end();
         logger.info("DELETE /client/:id - Register deleted with success");
     } catch (e) {
         next(e);
@@ -47,7 +47,7 @@ async function updateClient(req, res, next) {
     try {
         let client = req.body;
         client = await updateClientById(client);
-        res.send(client);
+        res.status(200).json(client);
         logger.info(`PUT /client - ${JSON.stringify(client)}`);
 
     } catch (e) {

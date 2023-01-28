@@ -6,7 +6,7 @@ async function createProduct(req, res, next) {
         let product = req.body;
         //ProductService
         product = await saveProduct(product);
-        res.send(product);
+        res.status(201).json(product);
         logger.info(`POST /product - ${JSON.stringify(product)}`);
 
     } catch (e) {
@@ -36,7 +36,7 @@ async function getProductById(req, res, next) {
 async function deleteProduct(req, res, next) {
     try {
         await destroyProduct(req.params.id);
-        res.end();
+        res.status(204).end();
         logger.info("DELETE /product/:id - Register deleted with success");
     } catch (e) {
         next(e);
@@ -47,7 +47,7 @@ async function updateProduct(req, res, next) {
     try {
         let product = req.body;
         product = await updateProductById(product);
-        res.send(product);
+        res.status(200).json(product);
         logger.info(`PUT /product - ${JSON.stringify(product)}`);
 
     } catch (e) {

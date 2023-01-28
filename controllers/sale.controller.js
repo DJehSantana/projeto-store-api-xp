@@ -6,7 +6,7 @@ async function createSale(req, res, next) {
         let sale = req.body;
         //SaleService
         sale = await saveSale(sale);
-        res.send(sale);
+        res.status(201).json(sale);
         logger.info(`POST /sale - ${JSON.stringify(sale)}`);
 
     } catch (e) {
@@ -36,7 +36,7 @@ async function getSaleById(req, res, next) {
 async function deleteSale(req, res, next) {
     try {
         await destroySale(req.params.id);
-        res.end();
+        res.status(204).end();
         logger.info("DELETE /sale/:id - Register deleted with success");
     } catch (e) {
         next(e);
@@ -47,7 +47,7 @@ async function updateSale(req, res, next) {
     try {
         let sale = req.body;
         sale = await updateSaleById(sale);
-        res.send(sale);
+        res.status(200).json(sale);
         logger.info(`PUT /sale - ${JSON.stringify(sale)}`);
 
     } catch (e) {

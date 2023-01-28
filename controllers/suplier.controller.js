@@ -6,7 +6,7 @@ async function createSuplier(req, res, next) {
         let suplier = req.body;
         //SuplierService
         suplier = await saveSuplier(suplier);
-        res.send(suplier);
+        res.status(201).json(suplier);
         logger.info(`POST /supplier - ${JSON.stringify(suplier)}`);
 
     } catch (e) {
@@ -36,7 +36,7 @@ async function getSuplierById(req, res, next) {
 async function deleteSuplier(req, res, next) {
     try {
         await destroySuplier(req.params.id);
-        res.end();
+        res.status(204).end();
         logger.info("DELETE /supplier/:id - Register deleted with success");
     } catch (e) {
         next(e);
@@ -47,7 +47,7 @@ async function updateSuplier(req, res, next) {
     try {
         let suplier = req.body;
         suplier = await updateSuplierById(suplier);
-        res.send(suplier);
+        res.status(200).json(suplier);
         logger.info(`PUT /supplier - ${JSON.stringify(suplier)}`);
 
     } catch (e) {
