@@ -109,3 +109,54 @@
 2023-01-28T21:47:41.545Z [store-api] info POST /sale - {"saleId":9,"clientId":2,"productId":9,"value":"180","date":"2023-01-28"}
 2023-01-28T21:47:47.802Z [store-api] info POST /sale - {"saleId":10,"clientId":2,"productId":9,"value":"180","date":"2023-01-28"}
 2023-01-28T21:48:00.152Z [store-api] info DELETE /sale/:id - Register deleted with success
+2023-01-28T22:57:11.804Z [store-api] info POST /product/info - undefined
+2023-01-28T22:57:32.675Z [store-api] info GET /product - [object Object]
+2023-01-28T22:58:14.212Z [store-api] info POST /product/info - undefined
+2023-01-28T22:58:41.824Z [store-api] error POST  - productId is required field
+2023-01-28T23:06:03.183Z [store-api] info POST /product/info - undefined
+2023-01-28T23:09:29.956Z [store-api] info POST /product/info - {"_id":"63d5a8868dd10786d723f264","productId":1,"category":"Notebook","width":"30cm","heigth":"65cm","reviews":[],"__v":0}
+2023-01-28T23:10:42.858Z [store-api] info POST /product/info - {"_id":"63d5a8868dd10786d723f264","productId":1,"category":"Notebook","width":"35cm","heigth":"65cm","reviews":[],"__v":0}
+2023-01-28T23:12:00.180Z [store-api] info POST /product/info - {"_id":"63d5a8868dd10786d723f264","productId":1,"category":"Notebook","width":"30cm","heigth":"65cm","reviews":[],"__v":0}
+2023-01-28T23:14:35.814Z [store-api] info POST /product/info - {"_id":"63d5a8868dd10786d723f264","productId":1,"category":"Notebook","width":"40cm","heigth":"65cm","reviews":[],"__v":0}
+2023-01-28T23:15:28.637Z [store-api] info POST /product/info - undefined
+2023-01-28T23:22:20.084Z [store-api] info POST /product/info - {"_id":"63d5a8478dd10786d723f262","productId":7,"category":"Mouse sem fio","width":"30cm","heigth":"45cm","depth":"15cm","reviews":[],"__v":0}
+2023-01-28T23:28:34.141Z [store-api] error GET  - Register not found
+2023-01-28T23:28:44.717Z [store-api] error GET  - Register not found
+2023-01-28T23:28:47.785Z [store-api] error GET  - Register not found
+2023-01-28T23:29:32.409Z [store-api] error GET  - Register not found
+2023-01-28T23:30:22.737Z [store-api] error GET  - Register not found
+2023-01-28T23:45:34.146Z [store-api] error GET  - Register not found
+2023-01-28T23:46:03.279Z [store-api] info GET /product/info - [{"_id":"63d5a8478dd10786d723f262","productId":7,"category":"Mouse sem fio","width":"30cm","heigth":"45cm","depth":"15cm","reviews":[],"__v":0},{"_id":"63d5a8868dd10786d723f264","productId":1,"category":"Notebook","width":"35cm","heigth":"65cm","reviews":[],"__v":0},{"_id":"63d5ac9059372b6453fe5702","productId":3,"category":"Notebook","width":"30cm","heigth":"65cm","reviews":[],"__v":0}]
+2023-01-28T23:49:33.340Z [store-api] error GET  - Cannot access 'query' before initialization
+2023-01-28T23:49:42.223Z [store-api] error GET  - Cannot access 'query' before initialization
+2023-01-28T23:50:27.209Z [store-api] error GET  - params.replace is not a function
+2023-01-28T23:54:07.842Z [store-api] error GET  - params.replace is not a function
+2023-01-28T23:56:28.521Z [store-api] info GET /product/info - []
+2023-01-28T23:56:37.340Z [store-api] info GET /product/info - [{"_id":"63d5a8868dd10786d723f264","productId":1,"category":"Notebook","width":"35cm","heigth":"65cm","reviews":[],"__v":0},{"_id":"63d5ac9059372b6453fe5702","productId":3,"category":"Notebook","width":"30cm","heigth":"65cm","reviews":[],"__v":0}]
+2023-01-29T00:08:05.663Z [store-api] info GET /product/info - [{"_id":"63d5a8478dd10786d723f262","productId":7,"category":"Mouse sem fio","width":"30cm","heigth":"45cm","depth":"15cm","reviews":[],"__v":0},{"_id":"63d5a8868dd10786d723f264","productId":1,"category":"Notebook","width":"35cm","heigth":"65cm","reviews":[],"__v":0},{"_id":"63d5ac9059372b6453fe5702","productId":3,"category":"Notebook","width":"30cm","heigth":"65cm","reviews":[],"__v":0}]
+2023-01-29T00:09:08.545Z [store-api] info GET /product/info - []
+2023-01-29T00:13:23.435Z [store-api] info GET /product/info - [{"_id":"63d5a8478dd10786d723f262","productId":7,"category":"Mouse sem fio","width":"30cm","heigth":"45cm","depth":"15cm","reviews":[],"__v":0}]
+2023-01-29T00:14:28.722Z [store-api] info GET /product - [object Object]
+2023-01-29T00:18:06.553Z [store-api] info GET /product - [object Object]
+2023-01-29T00:18:19.120Z [store-api] info GET /product/:id - {"productId":7,"name":"Mouse Dell","description":"Mouse Bluetooh Dell","value":"60","stock":3,"suplierId":3}
+2023-01-29T00:20:31.572Z [store-api] info GET /product/:id - {"productId":7,"name":"Mouse Dell","description":"Mouse Bluetooh Dell","value":"60","stock":3,"suplierId":3,"info":{"_id":"63d5a8478dd10786d723f262","productId":7,"category":"Mouse sem fio","width":"30cm","heigth":"45cm","depth":"15cm","reviews":[],"__v":0}}
+2023-01-29T00:32:39.854Z [store-api] info POST /product/info - [{"_id":"63d5a8478dd10786d723f262","productId":7,"category":"Mouse sem fio","width":"30cm","heigth":"45cm","depth":"15cm","reviews":[],"__v":0}]
+2023-01-29T00:35:59.977Z [store-api] info POST /product/info - [{"_id":"63d5a8478dd10786d723f262","productId":7,"category":"Mouse sem fio","width":"30cm","heigth":"45cm","depth":"15cm","reviews":[],"__v":0}]
+2023-01-29T00:36:23.882Z [store-api] info POST /product/info - [{"_id":"63d5a8478dd10786d723f262","productId":7,"category":"Mouse sem fio","width":"30cm","heigth":"45cm","depth":"15cm","reviews":[],"__v":0}]
+2023-01-29T00:37:10.581Z [store-api] info POST /product/info - [{"_id":"63d5a8478dd10786d723f262","productId":7,"category":"Mouse sem fio","width":"30cm","heigth":"45cm","depth":"15cm","reviews":[],"__v":0}]
+2023-01-29T00:38:00.218Z [store-api] info POST /product/info - [{"_id":"63d5a8478dd10786d723f262","productId":7,"category":"Mouse sem fio","width":"30cm","heigth":"45cm","depth":"15cm","reviews":[],"__v":0}]
+2023-01-29T00:39:26.453Z [store-api] info POST /product/info - [{"_id":"63d5a8478dd10786d723f262","productId":7,"category":"Mouse sem fio","width":"30cm","heigth":"45cm","depth":"15cm","reviews":[],"__v":0}]
+2023-01-29T00:41:54.911Z [store-api] info POST /product/info - [{"_id":"63d5a8478dd10786d723f262","productId":7,"category":"Mouse sem fio","width":"30cm","heigth":"45cm","depth":"15cm","reviews":[],"__v":0}]
+2023-01-29T00:45:08.879Z [store-api] info POST /product/review - {"_id":"63d5a8478dd10786d723f262","productId":7,"category":"Mouse sem fio","width":"30cm","heigth":"45cm","depth":"15cm","reviews":[],"__v":0}
+2023-01-29T00:46:36.939Z [store-api] info GET /sale - [object Object]
+2023-01-29T00:47:17.268Z [store-api] info POST /product/review - Created with success
+2023-01-29T01:00:18.701Z [store-api] info DELETE /product/review - Created with success
+2023-01-29T01:05:44.545Z [store-api] info POST /product/review - Created with success
+2023-01-29T01:05:59.101Z [store-api] info DELETE /product/review - Register delete with success
+2023-01-29T01:06:11.086Z [store-api] info POST /product/review - Created with success
+2023-01-29T01:06:48.286Z [store-api] info GET /product/info - [{"_id":"63d5a8478dd10786d723f262","productId":7,"category":"Mouse sem fio","width":"30cm","heigth":"45cm","depth":"15cm","reviews":[{"name":"Daniel da Silva","description":"Produto Excelente","_id":"63d5c194e384be56ea47a753"},{"name":"Carlos","description":"Amei o produto","_id":"63d5c683cb180b8ffb06136d"}],"__v":0}]
+2023-01-29T01:06:57.507Z [store-api] info GET /product/info - [{"_id":"63d5a8478dd10786d723f262","productId":7,"category":"Mouse sem fio","width":"30cm","heigth":"45cm","depth":"15cm","reviews":[{"name":"Daniel da Silva","description":"Produto Excelente","_id":"63d5c194e384be56ea47a753"},{"name":"Carlos","description":"Amei o produto","_id":"63d5c683cb180b8ffb06136d"}],"__v":0},{"_id":"63d5a8868dd10786d723f264","productId":1,"category":"Notebook","width":"35cm","heigth":"65cm","reviews":[],"__v":0},{"_id":"63d5ac9059372b6453fe5702","productId":3,"category":"Notebook","width":"30cm","heigth":"65cm","reviews":[],"__v":0}]
+2023-01-29T01:07:59.389Z [store-api] info DELETE /product/info - Register delete with success
+2023-01-29T01:08:08.970Z [store-api] info GET /product/info - [{"_id":"63d5a8478dd10786d723f262","productId":7,"category":"Mouse sem fio","width":"30cm","heigth":"45cm","depth":"15cm","reviews":[{"name":"Daniel da Silva","description":"Produto Excelente","_id":"63d5c194e384be56ea47a753"},{"name":"Carlos","description":"Amei o produto","_id":"63d5c683cb180b8ffb06136d"}],"__v":0},{"_id":"63d5a8868dd10786d723f264","productId":1,"category":"Notebook","width":"35cm","heigth":"65cm","reviews":[],"__v":0}]
+2023-01-29T01:08:16.381Z [store-api] info POST /product/info - undefined
+2023-01-29T01:08:22.320Z [store-api] info GET /product/info - [{"_id":"63d5a8478dd10786d723f262","productId":7,"category":"Mouse sem fio","width":"30cm","heigth":"45cm","depth":"15cm","reviews":[{"name":"Daniel da Silva","description":"Produto Excelente","_id":"63d5c194e384be56ea47a753"},{"name":"Carlos","description":"Amei o produto","_id":"63d5c683cb180b8ffb06136d"}],"__v":0},{"_id":"63d5a8868dd10786d723f264","productId":1,"category":"Notebook","width":"35cm","heigth":"65cm","reviews":[],"__v":0},{"_id":"63d5c7002d783933c10025a1","productId":3,"category":"Notebook","width":"30cm","heigth":"65cm","reviews":[],"__v":0}]

@@ -18,7 +18,8 @@ async function getAllProducts() {
 
 async function getProductById(id) {
     try {
-        return await Product.findByPk(id);
+        //retorna o objeto já como um json {raw: true}
+        return await Product.findByPk(id, { raw: true });
     } catch (error) {
         throw error;
     }

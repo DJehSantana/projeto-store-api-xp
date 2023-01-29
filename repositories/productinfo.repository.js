@@ -19,7 +19,7 @@ async function updateProductInfo(productInfo) {
         const mongoose = await mongoConnect();
         const ProductInfo = mongoose.model("ProductInfo", ProductInfoSchema);
         //filtra o objeto pelo productId e insere as atualizações
-        await ProductInfo.findOneAndUpdate({ productId: productInfo.productId }, productInfo);
+        return await ProductInfo.findOneAndUpdate({ productId: productInfo.productId }, productInfo);
     } catch (error) {
         throw error;
     }
@@ -37,11 +37,11 @@ async function getProductInfo(productId) {
     }
 }
 
-async function getAllProductsInfo() {
+async function getAllProductsInfo(params) {
     try {
         const mongoose = await mongoConnect();
         const ProductInfo = mongoose.model("ProductInfo", ProductInfoSchema);
-        const query = ProductInfo.find({});
+        const query = ProductInfo.find(params);
         return await query.exec();
     } catch (error) {
         throw error;
@@ -63,7 +63,7 @@ async function createReview(review, productId) {
     try {
         const productInfo = await getProductInfo(productId);
         productInfo.reviews.push(review);
-        await updateProductInfo(productInfo);
+        return await updateProductInfo(productInfo);
     }
     catch (error) {
         throw error;

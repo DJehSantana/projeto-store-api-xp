@@ -1,4 +1,5 @@
 import { insertProduct, getAllProducts, getProductById, updateProduct, deleteProduct } from "../repositories/product.repository.js"
+import { createProductInfo, createReview, deleteProductInfo, deleteReview, getAllProductsInfo, getProductInfo, updateProductInfo } from "../repositories/productInfo.repository.js";
 import { getSalesByProductId } from "../repositories/sale.repository.js";
 import { getSuplierById } from '../repositories/suplier.repository.js'
 
@@ -22,7 +23,10 @@ async function getProduct(id) {
     if (!id || !parseInt(id)) {
         throw new Error("Register not found");
     }
-    return await getProductById(parseInt(id));
+    const product = await getProductById(parseInt(id));
+    //adiciona as informações do produto vindas do mongo db em uma propriedade do produto
+    product.info = await getProductInfo(parseInt(id));
+    return product;
 }
 
 async function destroyProduct(id) {
@@ -53,11 +57,66 @@ async function updateProductById(product) {
     return await updateProduct(product);
 }
 
+async function saveProductInfo(productInfo) {
+    if (!productInfo.productId) {
+        throw new Error("productId is required field");
+    }
+    await createProductInfo(productInfo);
+}
+
+async function updateProductInfoByProductId(productInfo) {
+    if (!productInfo.productId) {
+        throw new Error("productId is required field");
+    }
+
+    await updateProductInfo(productInfo);
+}
+
+async function getOneProductInfo(productId) {
+    if (!productId || !parseInt(productId)) {
+        throw new Error("productId is required field");
+    }
+
+    return await getProductInfo(productId);
+}
+
+async function getProductsInfo(query) {
+    return await getAllProductsInfo(query);
+}
+
+async function destroyProductInfo(productId) {
+    if (!productId) {
+        throw new Error("Register not found");
+    }
+    await deleteProductInfo(productId);
+}
+
+async function saveReview(productInfo) {
+    if (!productInfo.productId || !productInfo.review) {
+        throw new Error("Empty required fields");
+    }
+
+    return await createReview(productInfo.review, productInfo.productId);
+}
+
+async function destroyReview(productId, index) {
+    if (!productId, !index) {
+        throw new Error("Register not found");
+    }
+    await deleteReview(productId, index);
+}
 
 export {
     saveProduct,
     getProducts,
     getProduct,
     destroyProduct,
-    updateProductById
+    updateProductById,
+    saveProductInfo,
+    updateProductInfoByProductId,
+    getOneProductInfo,
+    getProductsInfo,
+    destroyProductInfo,
+    saveReview,
+    destroyReview
 }
