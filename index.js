@@ -7,6 +7,7 @@ import { productRouter } from './routes/product.route.js';
 import { saleRouter } from './routes/sale.route.js';
 import dotenv from 'dotenv';
 import { logger } from './enums/logger.js';
+//import { infoRouter } from './routes/info.route.js';
 
 const app = express();
 dotenv.config();
@@ -19,6 +20,7 @@ app.use(cors());
 app.use('/client', clientRouter);
 app.use('/supplier', supplierRouter);
 app.use('/product', productRouter);
+//app.use('/product/info', infoRouter);
 app.use('/sale', saleRouter);
 
 app.use((error, req, res, next) => {

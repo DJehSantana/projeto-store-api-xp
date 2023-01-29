@@ -8,6 +8,7 @@ export const ProductInfoSchema = new mongoose.Schema(
         width: String,
         heigth: String,
         depth: String,
+        color: String,
         reviews: [ReviewSchema]
 
     }, { collection: "productInfo" }

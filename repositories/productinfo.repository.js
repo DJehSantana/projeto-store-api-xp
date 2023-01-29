@@ -62,6 +62,9 @@ async function deleteProductInfo(productId) {
 async function createReview(review, productId) {
     try {
         const productInfo = await getProductInfo(productId);
+        if (!productInfo) {
+            throw new Error("Register not found");
+        }
         productInfo.reviews.push(review);
         return await updateProductInfo(productInfo);
     }
@@ -73,6 +76,9 @@ async function createReview(review, productId) {
 async function deleteReview(productId, index) {
     try {
         const productInfo = await getProductInfo(productId);
+        if (!productInfo) {
+            throw new Error("Register not found");
+        }
         //splice - remove um item a partir do index informado
         productInfo.reviews.splice(index, 1);
         await updateProductInfo(productInfo);

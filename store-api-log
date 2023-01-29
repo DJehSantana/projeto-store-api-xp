@@ -160,3 +160,26 @@
 2023-01-29T01:08:08.970Z [store-api] info GET /product/info - [{"_id":"63d5a8478dd10786d723f262","productId":7,"category":"Mouse sem fio","width":"30cm","heigth":"45cm","depth":"15cm","reviews":[{"name":"Daniel da Silva","description":"Produto Excelente","_id":"63d5c194e384be56ea47a753"},{"name":"Carlos","description":"Amei o produto","_id":"63d5c683cb180b8ffb06136d"}],"__v":0},{"_id":"63d5a8868dd10786d723f264","productId":1,"category":"Notebook","width":"35cm","heigth":"65cm","reviews":[],"__v":0}]
 2023-01-29T01:08:16.381Z [store-api] info POST /product/info - undefined
 2023-01-29T01:08:22.320Z [store-api] info GET /product/info - [{"_id":"63d5a8478dd10786d723f262","productId":7,"category":"Mouse sem fio","width":"30cm","heigth":"45cm","depth":"15cm","reviews":[{"name":"Daniel da Silva","description":"Produto Excelente","_id":"63d5c194e384be56ea47a753"},{"name":"Carlos","description":"Amei o produto","_id":"63d5c683cb180b8ffb06136d"}],"__v":0},{"_id":"63d5a8868dd10786d723f264","productId":1,"category":"Notebook","width":"35cm","heigth":"65cm","reviews":[],"__v":0},{"_id":"63d5c7002d783933c10025a1","productId":3,"category":"Notebook","width":"30cm","heigth":"65cm","reviews":[],"__v":0}]
+2023-01-29T01:18:04.252Z [store-api] error GET  - productId is required field
+2023-01-29T01:18:18.943Z [store-api] error GET  - productId is required field
+2023-01-29T01:19:57.081Z [store-api] error GET  - Register not found
+2023-01-29T01:19:59.334Z [store-api] error GET  - Register not found
+2023-01-29T01:20:13.871Z [store-api] error GET  - Register not found
+2023-01-29T01:20:17.274Z [store-api] error GET  - Register not found
+2023-01-29T01:22:17.465Z [store-api] error GET  - productId is required field
+2023-01-29T01:25:59.807Z [store-api] info GET /product/info - [{"_id":"63d5a8478dd10786d723f262","productId":7,"category":"Mouse sem fio","width":"30cm","heigth":"45cm","depth":"15cm","reviews":[{"name":"Daniel da Silva","description":"Produto Excelente","_id":"63d5c194e384be56ea47a753"},{"name":"Carlos","description":"Amei o produto","_id":"63d5c683cb180b8ffb06136d"}],"__v":0},{"_id":"63d5a8868dd10786d723f264","productId":1,"category":"Notebook","width":"35cm","heigth":"65cm","reviews":[],"__v":0},{"_id":"63d5c7002d783933c10025a1","productId":3,"category":"Notebook","width":"30cm","heigth":"65cm","reviews":[],"__v":0}]
+2023-01-29T01:39:43.213Z [store-api] error POST  - logger is not defined
+2023-01-29T01:40:02.587Z [store-api] error GET  - logger is not defined
+2023-01-29T01:40:13.944Z [store-api] error GET  - logger is not defined
+2023-01-29T01:40:19.360Z [store-api] error GET  - logger is not defined
+2023-01-29T01:40:49.085Z [store-api] error DELETE  - logger is not defined
+2023-01-29T01:40:55.834Z [store-api] error GET  - logger is not defined
+2023-01-29T01:41:09.499Z [store-api] error PUT  - logger is not defined
+2023-01-29T01:41:19.812Z [store-api] error GET  - logger is not defined
+2023-01-29T01:43:04.737Z [store-api] error POST  - logger is not defined
+2023-01-29T01:43:52.571Z [store-api] error DELETE  - logger is not defined
+2023-01-29T01:44:15.436Z [store-api] error POST  - logger is not defined
+2023-01-29T01:44:54.101Z [store-api] error PUT  - logger is not defined
+2023-01-29T01:45:14.636Z [store-api] error GET  - logger is not defined
+2023-01-29T01:46:30.574Z [store-api] error POST  - logger is not defined
+2023-01-29T01:47:41.630Z [store-api] info GET /product/info - Success
